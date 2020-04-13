@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./index.css" />
+    <meta
+      name="description"
+      content="This is a web app built for covid19 1mpact estimator"
+    />
+    <title>buildForSDG</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Comfortaa&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    />
+  </head>
+  <style>
+    html,
+    body {
+      font-family: "Comfortaa", cursive;
+      padding: 0;
+      margin: 0;
+    }
+
+    input {
+      padding: 1em;
+      margin-bottom: 1em;
+      width: 300px;
+      border: 1px solid black;
+    }
+    .btn {
+      padding: 10px;
+      background-color: #0e2ca5;
+      border: 0;
+      color: whitesmoke;
+      width: 300px;
+    }
+    #navbar {
+      background-color: #0e2ca5;
+      color: whitesmoke;
+    }
+  </style>
+  <body>
+    <nav class="navbar navbar-expand-md navbar-light p-3 mb-4" id="navbar">
+      <p class="h5 font-weight-bold text-warning">
+        #BuildforSDG Challenge 2020
+      </p>
+    </nav>
+    <div class="container mt-5">
+      <p class="font-weight-bold">COVID19 IMPACT ESTIMATOR</p>
+      <form class="mt-3">
+        <div class="form-row">
+          <div class="col-xl-6">
+            <small>population </small>
+            <input type="text" class="form-control" required data-population />
+          </div>
+
+          <div class="col-xl-6">
+            <small>time to elapse </small>
+            <input
+              type="text"
+              class="form-control"
+              required
+              data-time-to-elapse
+            />
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="col-xl-6">
+            <small>reported cases </small>
+            <input
+              type="text"
+              class="form-control"
+              required
+              data-reported-case
+            />
+          </div>
+
+          <div class="col-xl-6">
+            <small>total hospital beds</small>
+            <input
+              type="text"
+              class="form-control"
+              required
+              data-total-hospital-beds
+            />
+          </div>
+        </div>
+        <small>period type</small>
+        <select class="browser-default custom-select mb-3" data-period-type>
+          <option value="2" selected>
+            Days
+          </option>
+          <option value="3">Weeks</option>
+          <option value="4">Months</option>
+        </select>
+        <button type="submit" class="btn" data-goestimate>
+          <small>ESTIMATE IMPACT</small>
+        </button>
+      </form>
+    </div>
+  </body>
+</html>
