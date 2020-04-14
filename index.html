@@ -3,7 +3,6 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./index.css" />
     <meta
       name="description"
       content="This is a web app built for covid19 1mpact estimator"
@@ -24,6 +23,8 @@
       font-family: "Comfortaa", cursive;
       padding: 0;
       margin: 0;
+      font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+        "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
     }
 
     input {
@@ -55,15 +56,22 @@
       <form class="mt-3">
         <div class="form-row">
           <div class="col-xl-6">
-            <small>population </small>
-            <input type="text" class="form-control" required data-population />
-          </div>
-
-          <div class="col-xl-6">
-            <small>time to elapse </small>
+            <label for="population">population </label>
             <input
               type="text"
               class="form-control"
+              required
+              data-population
+              id="population"
+            />
+          </div>
+
+          <div class="col-xl-6">
+            <label for="time-to-elapse">time to elapse </label>
+            <input
+              type="text"
+              class="form-control"
+              id="time-to-elapse"
               required
               data-time-to-elapse
             />
@@ -71,27 +79,33 @@
         </div>
         <div class="form-row">
           <div class="col-xl-6">
-            <small>reported cases </small>
+            <label for="reported-cases">reported cases </label>
             <input
               type="text"
               class="form-control"
+              id="reported-cases"
               required
               data-reported-case
             />
           </div>
 
           <div class="col-xl-6">
-            <small>total hospital beds</small>
+            <label for="total-hospital-beds">total hospital beds</label>
             <input
               type="text"
               class="form-control"
+              id="total-hospital-beds"
               required
               data-total-hospital-beds
             />
           </div>
         </div>
-        <small>period type</small>
-        <select class="browser-default custom-select mb-3" data-period-type>
+        <label for="period-type">period type</label>
+        <select
+          class="browser-default custom-select mb-3"
+          id="period-type"
+          data-period-type
+        >
           <option value="2" selected>
             Days
           </option>
